@@ -1,0 +1,57 @@
+import type { Story } from '../types'
+
+const CDN = 'https://cdn.shopify.com/s/files/1/0647/1437/5267/files'
+
+export const stories: Story[] = [
+  {
+    id: 's1',
+    title: 'The Appliance That Finally Lives on the Counter',
+    author: 'Tanvi & Harsh',
+    location: 'Bandra, Mumbai',
+    productUsed: 'LUMA Origin Orange',
+    category: 'Design & Home',
+    quote: 'Every previous air fryer ended up buried in the lower cabinet because they looked like black plastic office printers. LUMA feels like an art piece.',
+    body: 'We renovated our kitchen with open birch shelves and terracotta tiles. Traditional appliances stuck out like eyesores. Origin Orange brought warmth and life into the space. We use it twice a day — granola and sourdough toast in the morning, grilled veggies or roasted paneer at night.',
+    image: `${CDN}/pdp-1.webp?v=1783381040`,
+    videoUrl: 'https://edtworld.com/cdn/shop/videos/c/vp/fb2bd67303224f51b15332a9f0ed5a1f/fb2bd67303224f51b15332a9f0ed5a1f.HD-1080p-7.2Mbps-85930165.mp4?v=0',
+    date: 'September 2026',
+  },
+  {
+    id: 's2',
+    title: 'Zero Teflon, Real Peace of Mind for Our Toddler',
+    author: 'Dr. Radhika Sen',
+    location: 'Indiranagar, Bengaluru',
+    productUsed: 'LUMA Double Stack',
+    category: 'Real Cooks',
+    quote: 'As a pediatrician, I was paranoid about non-stick coatings degrading into food at 200°C. PureGlass was the only air fryer I trusted in our home.',
+    body: 'Being able to see our food sizzle through crystal clear glass without releasing fumes is transformative. Dual bowls allow me to steam broccoli and sweet potato wedges for our 2-year-old in the 2.5L bowl while making herb-roasted chicken for dinner in the 4.5L bowl.',
+    image: `${CDN}/First_Image.webp?v=1791383086`,
+    videoUrl: 'https://edtworld.com/cdn/shop/videos/c/vp/848c3876a8a246c09a45ed29d33f8bf5/848c3876a8a246c09a45ed29d33f8bf5.HD-1080p-2.5Mbps-79441716.mp4?v=0',
+    date: 'August 2026',
+  },
+  {
+    id: 's3',
+    title: 'Our Morning Ritual, Redesigned',
+    author: 'Vikram Joshi',
+    location: 'Koregaon Park, Pune',
+    productUsed: 'FLOW Smart Kettle',
+    category: 'Kitchen Life',
+    quote: 'The 60-minute temperature hold changed my remote work morning. No more microwave reheated chai or bitter scorched tea leaves.',
+    body: 'Chai is sacred in our family. Previous electric kettles boiled violently and splashed water over the counter. FLOW pours with gooseneck stillness. Setting exact 95°C for morning pour-overs and 100°C for evening adrak chai feels like a calm ceremony before the workday begins.',
+    image: 'https://edtworld.com/cdn/shop/files/preview_images/848c3876a8a246c09a45ed29d33f8bf5.thumbnail.0000000000_small.jpg?v=1774434225',
+    videoUrl: 'https://edtworld.com/cdn/shop/videos/c/vp/6dac31fc408a4f24a18f6bc7e3326280/6dac31fc408a4f24a18f6bc7e3326280.HD-1080p-2.5Mbps-88228778.mp4?v=0',
+    date: 'July 2026',
+  },
+  {
+    id: 's4',
+    title: 'Saying Goodbye to Cuticle Heat Burn with SUKI',
+    author: 'Pooja Nair',
+    location: 'Cyber Hub, Gurugram',
+    productUsed: 'SUKI Care-Dryer™',
+    category: 'Design & Home',
+    quote: 'My frizzy curls used to break constantly with normal dryers. SUKI regulates heat automatically so hair dries fast without feeling like straw.',
+    body: 'I blow-dry my hair 3 times a week for client meetings. The CareDry algorithm literally drops the temperature as hair nears dry state. The shine difference was visible from day one, and the Space Neon body is extraordinarily light.',
+    image: 'https://edtworld.com/cdn/shop/files/suki-share-preview.png?v=8553000192865328878',
+    date: 'October 2026',
+  },
+]

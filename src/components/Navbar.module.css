@@ -1,0 +1,220 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+  transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hero overlay mode (used on Home and Beauty) */
+.heroNav {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.25) 60%, transparent 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.heroNav .logo,
+.heroNav .link,
+.heroNav .iconBtn,
+.heroNav .mobileToggle {
+  color: #ffffff;
+}
+
+.heroNav .link:hover,
+.heroNav .link.active {
+  color: #ff9d5c;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.heroNav.scrolled {
+  position: fixed;
+  background: rgba(18, 15, 13, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Standard pages: Shop, Contact, etc. */
+.standardNav {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 247, 244, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--edt-line);
+  color: var(--edt-ink);
+}
+
+.standardNav .logo,
+.standardNav .link,
+.standardNav .iconBtn,
+.standardNav .mobileToggle {
+  color: var(--edt-ink);
+}
+
+.standardNav .link:hover,
+.standardNav .link.active {
+  color: var(--edt-ink);
+  background: var(--edt-orange-soft);
+}
+
+.standardNav.scrolled {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Bar Container */
+.bar {
+  height: var(--nav-h);
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.mobileToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.trademark {
+  font-size: 0.65rem;
+  margin-left: 2px;
+  vertical-align: super;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.link {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.iconBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.standardNav .iconBtn:hover {
+  background: var(--edt-mist);
+}
+
+.badge {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.1rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding-inline: 0.25rem;
+  border-radius: 999px;
+  background: var(--edt-orange);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.mobileNav {
+  display: none;
+  border-top: 1px solid var(--edt-line);
+  background: var(--edt-ink);
+  color: #fff;
+}
+
+.standardNav .mobileNav {
+  background: var(--edt-cream);
+  color: var(--edt-ink);
+}
+
+.mobileNav.open {
+  display: block;
+}
+
+.mobileNav nav {
+  display: grid;
+  padding: 0.75rem 1rem 1.1rem;
+  gap: 0.15rem;
+}
+
+.mobileLink {
+  padding: 0.85rem 0.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: inherit;
+  text-decoration: none;
+}
+
+.standardNav .mobileLink {
+  border-bottom: 1px solid var(--edt-line);
+}
+
+@media (min-width: 900px) {
+  .mobileToggle {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: none !important;
+  }
+}

@@ -1,0 +1,131 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--edt-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--edt-line);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--edt-mist);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.badges {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.badge {
+  background: var(--edt-ink);
+  color: var(--edt-white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+}
+
+.best {
+  background: var(--edt-orange);
+}
+
+.sale {
+  background: var(--edt-white);
+  color: var(--edt-orange-deep);
+}
+
+.recommended {
+  background: #0284c7;
+  color: var(--edt-white);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.15rem 1.2rem 1.3rem;
+  flex: 1;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.reviews {
+  font-size: 0.8rem;
+  color: var(--edt-muted);
+}
+
+.name {
+  font-size: 1.15rem;
+}
+
+.tagline {
+  color: var(--edt-muted);
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.compare {
+  color: var(--edt-muted);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--edt-success);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.actions .btn {
+  flex: 1;
+  min-height: 2.5rem;
+  padding-inline: 0.75rem;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,184 @@
+.filterRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-block: var(--space-6) var(--space-6);
+  flex-wrap: wrap;
+}
+
+.pill,
+.pillActive {
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--edt-line);
+  background: var(--edt-white);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pillActive {
+  background: var(--edt-ink);
+  color: var(--edt-white);
+  border-color: var(--edt-ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: var(--space-5);
+}
+
+.card {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.mediaBox {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #000;
+  overflow: hidden;
+}
+
+.mediaBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.videoPlayIcon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.card:hover .videoPlayIcon {
+  background: rgba(255, 106, 0, 0.45);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.body h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.quote {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--edt-ink);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.narrative {
+  color: var(--edt-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--edt-line);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--edt-muted);
+}
+
+.productTag {
+  color: var(--edt-orange-deep);
+  font-weight: 600;
+}
+
+/* Modal for video/story inspection */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 7, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalCard {
+  background: var(--edt-white);
+  border-radius: var(--radius-lg);
+  max-width: 44rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.modalVideo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  display: block;
+}
+
+.modalBody {
+  padding: 1.75rem;
+}

@@ -1,0 +1,715 @@
+.pdp {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-7);
+  padding-block: var(--space-6);
+  align-items: start;
+}
+
+/* Gallery Column */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+
+.heroMediaWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--edt-mist);
+  border: 1px solid var(--edt-line);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoomHint {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(20, 17, 15, 0.7);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  pointer-events: none;
+}
+
+.thumbs {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.thumb,
+.thumbActive {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  background: var(--edt-mist);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.thumb:hover {
+  border-color: var(--edt-line);
+}
+
+.thumbActive {
+  border-color: var(--edt-orange);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoThumbBadge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Purchase Buybox Column */
+.buybox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryTag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--edt-orange);
+}
+
+.officialBadge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.buybox h1 {
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--edt-muted);
+}
+
+.reviewsLink {
+  color: var(--edt-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.tagline {
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--edt-ink-soft);
+}
+
+.priceBlock {
+  padding: 1rem 1.25rem;
+  background: var(--edt-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--edt-line);
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.currentPrice {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--edt-ink);
+}
+
+.comparePrice {
+  font-size: 1.1rem;
+  color: var(--edt-muted);
+  text-decoration: line-through;
+}
+
+.savingsBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.emiText {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--edt-success);
+  font-weight: 600;
+}
+
+/* Variant Selector */
+.variantSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.variantLabel {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--edt-ink);
+}
+
+.variantOptions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.variantBtn,
+.variantBtnActive {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--edt-line);
+  background: var(--edt-white);
+  font-size: 0.88rem;
+  font-weight: 550;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.variantBtnActive {
+  border-color: var(--edt-orange);
+  background: var(--edt-orange-soft);
+  color: var(--edt-orange-deep);
+}
+
+/* Quantity & Action Buttons */
+.purchaseControls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.qtyPicker {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--edt-line);
+  border-radius: 999px;
+  background: var(--edt-white);
+  padding: 0.2rem;
+}
+
+.qtyBtn {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--edt-ink);
+  transition: background 0.2s ease;
+}
+
+.qtyBtn:hover {
+  background: var(--edt-mist);
+}
+
+.qtyValue {
+  padding-inline: 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.addToCartBtn {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.buyNowBtn {
+  flex: 1;
+  min-width: 10rem;
+}
+
+/* Trust Strip Mini */
+.trustPills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.trustPill {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--edt-ink-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trustPill svg {
+  color: var(--edt-orange);
+}
+
+/* Why It Matters / Key Benefits */
+.sectionBlock {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--edt-line);
+}
+
+.benefitsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: var(--space-5);
+}
+
+.benefitItem {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1.15rem;
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.benefitCheck {
+  color: var(--edt-orange);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* Feature Cards */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.featureCard {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.featureCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.featureCard p {
+  color: var(--edt-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Specs & What's In Box Split */
+.specsBoxGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specTable tr {
+  border-bottom: 1px solid var(--edt-line);
+}
+
+.specTable th,
+.specTable td {
+  padding: 0.85rem 0;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.specTable th {
+  color: var(--edt-muted);
+  width: 45%;
+  font-weight: 550;
+}
+
+.inTheBoxCard {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.inTheBoxCard h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.boxList {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.boxList li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--edt-ink-soft);
+}
+
+/* Complete Your Setup (Compatible Accessories) */
+.setupGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.setupCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.setupCard img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--edt-mist);
+}
+
+.setupCard h4 {
+  font-size: 1.05rem;
+  margin-top: 0.75rem;
+}
+
+.setupCard p {
+  color: var(--edt-muted);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  flex: 1;
+}
+
+.setupPriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--edt-line);
+}
+
+/* FAQ Accordion */
+.faqList {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: var(--space-5);
+}
+
+.faqItem {
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  background: var(--edt-white);
+  overflow: hidden;
+}
+
+.faqTrigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 1.35rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faqBody {
+  padding: 0 1.35rem 1.25rem;
+  color: var(--edt-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Reviews Breakdown */
+.reviewsLayout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.ratingSummaryCard {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scoreBig {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.barsList {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--edt-muted);
+}
+
+.barTrack {
+  flex: 1;
+  height: 0.45rem;
+  background: var(--edt-mist);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--edt-star);
+  border-radius: 999px;
+}
+
+.reviewsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.reviewItem {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.reviewHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.verifiedBadge {
+  font-size: 0.72rem;
+  color: var(--edt-success);
+  font-weight: 600;
+}
+
+.reviewItem h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.reviewItem p {
+  color: var(--edt-ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.reviewAuthor {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--edt-muted);
+}
+
+@media (max-width: 960px) {
+  .pdp,
+  .benefitsList,
+  .featuresGrid,
+  .specsBoxGrid,
+  .setupGrid,
+  .reviewsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    position: static;
+  }
+}
+
+/* Free Accessory / Gift With Purchase Box */
+.freeGiftPromo {
+  background: linear-gradient(135deg, #fffbf5 0%, #fff6ea 100%);
+  border: 1.5px dashed #f06a1a;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.25rem 0 0.5rem;
+  box-shadow: 0 4px 14px rgba(240, 106, 26, 0.08);
+}
+
+.freeGiftPromoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.freeGiftBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #c2410c;
+  background: #ffedd5;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.freeGiftWorth {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #15803d;
+  background: #dcfce7;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.freeGiftPromoBody {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.freeGiftPromoThumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #ffffff;
+  border: 1px solid rgba(240, 106, 26, 0.2);
+  flex-shrink: 0;
+}
+
+.freeGiftPromoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.freeGiftPromoTitle {
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: #1c1917;
+  line-height: 1.25;
+}
+
+.freeGiftPromoDesc {
+  font-size: 0.76rem;
+  color: #57534e;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.freeGiftPricingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+}
+
+.freeGiftStrikethrough {
+  text-decoration: line-through;
+  color: #a8a29e;
+  font-size: 0.74rem;
+}
+
+.freeGiftFreeTag {
+  color: #15803d;
+  font-weight: 800;
+  font-size: 0.84rem;
+}
+
+.freeGiftIncludedNote {
+  color: #c2410c;
+  font-weight: 700;
+  font-size: 0.72rem;
+}
+

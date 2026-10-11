@@ -1,0 +1,20 @@
+.stars {
+  display: inline-flex;
+  gap: 0.1rem;
+  color: var(--edt-star);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.sm {
+  font-size: 0.8rem;
+}
+
+.filled {
+  opacity: 1;
+}
+
+.empty {
+  opacity: 0.25;
+  color: var(--edt-muted);
+}

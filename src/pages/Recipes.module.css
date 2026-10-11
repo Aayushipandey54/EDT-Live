@@ -1,0 +1,222 @@
+.header {
+  margin-bottom: var(--space-6);
+}
+
+.aiBanner {
+  margin-top: var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #2a180c 0%, #1a120c 100%);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.aiCopy {
+  max-width: 44rem;
+}
+
+.aiTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.aiCopy p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.45;
+}
+
+.filtersBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-block: var(--space-6) var(--space-5);
+  flex-wrap: wrap;
+}
+
+.categoryPills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pill,
+.pillActive {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--edt-line);
+  background: var(--edt-white);
+  font-weight: 550;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--edt-ink);
+}
+
+.pillActive {
+  background: var(--edt-ink);
+  color: var(--edt-white);
+  border-color: var(--edt-ink);
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  min-height: 2.6rem;
+  border: 1px solid var(--edt-line);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  background: var(--edt-white);
+  font-size: 0.9rem;
+  min-width: 14rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--edt-orange);
+}
+
+.vegCheck {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--edt-ink-soft);
+  cursor: pointer;
+}
+
+.recipeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: var(--space-5);
+}
+
+.recipeCard {
+  background: var(--edt-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--edt-line);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recipeCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.mediaWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--edt-mist);
+  overflow: hidden;
+}
+
+.mediaWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipeCard:hover .mediaWrap img {
+  transform: scale(1.04);
+}
+
+.applianceBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(20, 17, 15, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.videoBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--edt-orange);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cardContent {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--edt-muted);
+  margin-bottom: 0.5rem;
+}
+
+.metaCategory {
+  color: var(--edt-orange-deep);
+  font-weight: 600;
+}
+
+.metaTime {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metaDiff {
+  margin-left: auto;
+}
+
+.recipeTitle {
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin-bottom: 0.45rem;
+}
+
+.recipeSummary {
+  color: var(--edt-ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.cardFooter {
+  margin-top: auto;
+}

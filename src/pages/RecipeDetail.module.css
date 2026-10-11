@@ -1,0 +1,413 @@
+.pageWrap {
+  padding-block: var(--space-6);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--edt-muted);
+  margin-bottom: var(--space-5);
+}
+
+.breadcrumb a:hover {
+  color: var(--edt-orange);
+}
+
+.topLayout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Left: Video & Recipe Bio */
+.videoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.videoCard {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--edt-line);
+  box-shadow: var(--shadow-soft);
+}
+
+.videoCard video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoFallbackImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipeBio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.applianceTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--edt-orange-soft);
+  color: var(--edt-orange-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.summary {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--edt-ink-soft);
+}
+
+.metaBar {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  margin-top: 0.5rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--edt-muted);
+}
+
+.metaVal {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--edt-ink);
+}
+
+/* Right: Ingredients & Serving Selector */
+.ingredientsPanel {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+
+.servingSelectorBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--edt-line);
+}
+
+.servingLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.servingButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.servingBtn,
+.servingBtnActive {
+  padding: 0.6rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--edt-line);
+  background: var(--edt-cream);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.servingBtn:hover {
+  border-color: var(--edt-ink);
+}
+
+.servingBtnActive {
+  background: var(--edt-orange);
+  color: #fff;
+  border-color: var(--edt-orange);
+}
+
+.ingredientsList {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.ingredientRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ingredientRow input[type='checkbox'] {
+  margin-top: 0.25rem;
+  accent-color: var(--edt-orange);
+  cursor: pointer;
+}
+
+.ingredientTextChecked {
+  text-decoration: line-through;
+  color: var(--edt-muted);
+}
+
+.ingredientAmount {
+  font-weight: 700;
+  color: var(--edt-ink);
+}
+
+.ingredientNotes {
+  font-size: 0.8rem;
+  color: var(--edt-muted);
+  display: block;
+}
+
+/* Utilities Row */
+.utilitiesRow {
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid var(--edt-line);
+  padding-top: 1rem;
+}
+
+.utilBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--edt-line);
+  background: var(--edt-cream);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.utilBtn:hover {
+  background: var(--edt-white);
+  border-color: var(--edt-ink);
+}
+
+.utilBtnSaved {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+/* Step By Step Instructions Section */
+.instructionsSection {
+  margin-top: var(--space-8);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--edt-line);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.stepsList {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.stepCard {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.stepNumber {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--edt-orange);
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.stepInstruction {
+  color: var(--edt-ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.stepBadges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.stepBadge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--edt-mist);
+  color: var(--edt-ink);
+}
+
+/* Chef Tips & Appliance Pairing */
+.tipsSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.applianceHeroBox {
+  background: linear-gradient(135deg, #191410 0%, #291a10 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.applianceHeroBox h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.45rem;
+}
+
+.applianceHeroBox p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+
+.tipsBox {
+  background: var(--edt-white);
+  border: 1px solid var(--edt-line);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+}
+
+.tipsBox h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--edt-ink);
+}
+
+.tipsBox ul {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.tipsBox li {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--edt-ink-soft);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tipsBox li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--edt-orange);
+  font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .topLayout,
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredientsPanel {
+    position: static;
+  }
+}
+
+@media print {
+  .breadcrumb,
+  .videoCard,
+  .utilitiesRow,
+  .applianceHeroBox,
+  :global(header),
+  :global(footer) {
+    display: none !important;
+  }
+
+  .topLayout,
+  .stepsGrid {
+    display: block !important;
+  }
+
+  .ingredientsPanel {
+    border: none !important;
+    padding: 0 !important;
+  }
+}

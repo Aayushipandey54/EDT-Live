@@ -1,0 +1,156 @@
+.switcherContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  background: rgba(14, 11, 9, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.55),
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  z-index: 25;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.switcherContainer:hover {
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.65),
+    0 6px 16px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.labelPrefix {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.labelTitle {
+  font-size: 0.85rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+/* Inactive Tab State */
+.inactiveTab {
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+}
+
+.inactiveTab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.inactiveTab .iconWrapKitchen {
+  color: #ff9d5c;
+  background: rgba(255, 106, 0, 0.18);
+}
+
+.inactiveTab .iconWrapBeauty {
+  color: #dae135;
+  background: rgba(218, 225, 53, 0.18);
+}
+
+/* Active Kitchen State (EDT Origin Orange) */
+.activeKitchen {
+  background: linear-gradient(135deg, #ff7200 0%, #e85900 100%);
+  color: #ffffff !important;
+  box-shadow:
+    0 4px 18px rgba(255, 106, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.activeKitchen .labelPrefix {
+  opacity: 0.9;
+  color: #ffe0cc;
+}
+
+.activeKitchen .iconWrapKitchen {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Active Beauty State (EDT SUKI Neon Citron) */
+.activeBeauty {
+  background: linear-gradient(135deg, #e4eb34 0%, #c8d31a 100%);
+  color: #0c1200 !important;
+  box-shadow:
+    0 4px 18px rgba(218, 225, 53, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.activeBeauty .labelPrefix {
+  opacity: 0.85;
+  color: #3f4702;
+}
+
+.activeBeauty .iconWrapBeauty {
+  color: #0c1200;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Bubble */
+.iconWrapKitchen,
+.iconWrapBeauty {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  .switcherContainer {
+    padding: 0.25rem;
+    gap: 0.2rem;
+  }
+
+  .tab {
+    padding: 0.45rem 0.9rem;
+    gap: 0.45rem;
+  }
+
+  .labelPrefix {
+    font-size: 0.58rem;
+  }
+
+  .labelTitle {
+    font-size: 0.78rem;
+  }
+
+  .iconWrapKitchen,
+  .iconWrapBeauty {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
