@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -76,6 +76,16 @@ export function BeautyPage() {
   const [isPlayingHero, setIsPlayingHero] = useState(true)
   const [heroSound, setHeroSound] = useState(false)
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = !heroSound
+      const playPromise = videoRef.current.play()
+      if (playPromise) {
+        playPromise.catch(() => {})
+      }
+    }
+  }, [heroSound])
+
   const toggleHeroPlay = () => {
     if (videoRef.current) {
       if (isPlayingHero) {
@@ -126,11 +136,11 @@ export function BeautyPage() {
             muted={!heroSound}
             loop
             playsInline
-            poster="https://edtworld.com/cdn/shop/files/WEBSITE_1-02_1.webp?v=1791445709&width=1920"
+            poster="/assets/suki-hero-poster.jpg"
           >
             <source src="/assets/home-page.mp4" type="video/mp4" />
             <img
-              src="https://edtworld.com/cdn/shop/files/WEBSITE_1-02_1.webp?v=1791445709&width=1920"
+              src="/assets/suki-hero-poster.jpg"
               alt="SUKI Care-Dryer in use"
               className={styles.heroImgDesktop}
             />
