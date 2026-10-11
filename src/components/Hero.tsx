@@ -42,6 +42,19 @@ export interface HeroSlide {
 
 const slides: HeroSlide[] = [
   {
+    id: REPLACEABLE_CAMPAIGN_SLOT.id,
+    eyebrow: REPLACEABLE_CAMPAIGN_SLOT.eyebrow,
+    brandTag: REPLACEABLE_CAMPAIGN_SLOT.brandTag,
+    title: REPLACEABLE_CAMPAIGN_SLOT.title,
+    lead: REPLACEABLE_CAMPAIGN_SLOT.lead,
+    video: REPLACEABLE_CAMPAIGN_SLOT.desktopVideo,
+    poster: REPLACEABLE_CAMPAIGN_SLOT.posterImage,
+    fallbackImage: REPLACEABLE_CAMPAIGN_SLOT.fallbackImage,
+    isConfigurableSlot: true,
+    primary: REPLACEABLE_CAMPAIGN_SLOT.primary,
+    secondary: REPLACEABLE_CAMPAIGN_SLOT.secondary,
+  },
+  {
     id: 'luma-origin-orange',
     eyebrow: 'Hero product',
     brandTag: 'EDT LUMA',
@@ -79,19 +92,6 @@ const slides: HeroSlide[] = [
       'https://edtworld.com/cdn/shop/files/preview_images/848c3876a8a246c09a45ed29d33f8bf5.thumbnail.0000000000_small.jpg?v=1774434225',
     primary: { to: '/shop?category=home-kitchen', label: 'Shop air fryers' },
     secondary: { to: '/recipes', label: 'Explore recipes' },
-  },
-  {
-    id: REPLACEABLE_CAMPAIGN_SLOT.id,
-    eyebrow: REPLACEABLE_CAMPAIGN_SLOT.eyebrow,
-    brandTag: REPLACEABLE_CAMPAIGN_SLOT.brandTag,
-    title: REPLACEABLE_CAMPAIGN_SLOT.title,
-    lead: REPLACEABLE_CAMPAIGN_SLOT.lead,
-    video: REPLACEABLE_CAMPAIGN_SLOT.desktopVideo,
-    poster: REPLACEABLE_CAMPAIGN_SLOT.posterImage,
-    fallbackImage: REPLACEABLE_CAMPAIGN_SLOT.fallbackImage,
-    isConfigurableSlot: true,
-    primary: REPLACEABLE_CAMPAIGN_SLOT.primary,
-    secondary: REPLACEABLE_CAMPAIGN_SLOT.secondary,
   },
 ]
 
